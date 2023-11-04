@@ -1,13 +1,188 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.body-component {
+  background: rgba(78, 78, 237, 1);
+  background: linear-gradient(
+    270deg,
+    rgba(78, 78, 237, 0.5),
+    rgba(255, 255, 255, 1)
+  );
+  display: flex;
+  flex-direction: row;
+  padding: 10rem;
+}
+
+.content-component {
+  min-width: 35vw;
+  max-width: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 3rem;
+}
+
+.content-component > h1 {
+  margin: 2rem 0 0.5rem -3.5rem;
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  letter-spacing: -2px;
+  transform: scale(0.85, 1);
+}
+
+.content-component > p {
+  font-size: 1rem;
+  color: #696969;
+  margin: 1.5rem 3.75rem 0 0;
+  line-height: 1.5rem;
+}
+
+.calculator-component {
+  background-color: #fff;
+  width: 36vw;
+  padding: 2rem 1.75rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.calculator-component > h3 {
+  margin: 0 0 1rem -2rem;
+  font-size: 1.5rem;
+  transform: scale(0.9, 1);
+}
+
+.input-radio {
+  display: flex;
+  column-gap: 13.5rem;
+  margin-top: 1.5rem;
+}
+
+.custom-radio-btn {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-radio-btn .checkmark {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: 50%;
+  background-color: rgb(78, 78, 237);
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.custom-radio-btn input {
+  display: none;
+}
+
+.custom-radio-btn input:checked + .checkmark {
+  opacity: 1;
+}
+
+.input-radio1,
+.input-radio2 {
+  display: flex;
+  align-items: center;
+}
+
+.label-unit {
+  margin-left: 1rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+/**/
+.input-text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.input-text1,
+.input-text2 {
+  flex: 1;
+}
+
+.input-text2 {
+  margin-left: 63px;
+}
+
+.label {
+  opacity: 75%;
+  margin-bottom: 5px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.input-text1 > label,
+.input-text2 > label {
+  display: block;
+}
+
+.input-group > input,
+.input-group > input {
+  border: none;
+  outline: none;
+  text-align: left;
+  background: transparent;
+  padding: 15px;
+  font-size: 2rem;
+  opacity: 25%;
+  width: 175px;
+}
+
+.unit {
+  display: inline;
+  text-align: center;
+  color: rgb(78, 78, 237);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.result {
+  background-color: rgb(78, 78, 237);
+  color: #fff;
+  height: 120px;
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.bmi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bmi-info,
+.bmi-suggestion {
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.bmi-suggestion p {
+  white-space: normal; /* Prevent line breaks within the text */
 }
