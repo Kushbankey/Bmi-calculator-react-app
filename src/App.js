@@ -152,7 +152,7 @@ function Calculator() {
             </div>
           </div>
         ) : (
-          <div>
+          <div className="welcome-div">
             <h2>Welcome!</h2>
             <p>
               Enter your weight and height and you'll see your BMI result here!

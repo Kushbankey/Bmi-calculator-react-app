@@ -2,16 +2,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
-}
-
-.body-component {
   background: rgba(78, 78, 237, 1);
   background: linear-gradient(
     270deg,
     rgba(78, 78, 237, 0.5),
     rgba(255, 255, 255, 1)
   );
+}
+
+.body-component {
   display: flex;
   flex-direction: row;
   padding: 10rem;
@@ -47,6 +46,8 @@ body {
   padding: 2rem 1.75rem;
   border-radius: 10px;
   overflow: hidden;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .calculator-component > h3 {
@@ -108,15 +109,12 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 1.5rem;
+  column-gap: 4.5rem;
 }
 
 .input-text1,
 .input-text2 {
   flex: 1;
-}
-
-.input-text2 {
-  margin-left: 63px;
 }
 
 .label {
@@ -185,4 +183,135 @@ body {
 
 .bmi-suggestion p {
   white-space: normal; /* Prevent line breaks within the text */
+}
+
+/* Media Query for Laptops and Desktops */ 
+@media (min-width: 1025px){ 
+  body { 
+    overflow: hidden; 
+  } 
+} 
+
+/* Media Query for Tablets Ipads portrait mode */ 
+@media (min-width: 481px) and (max-width: 1024px){
+  .body-component {
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem;
+  }
+
+  .content-component {
+    min-width: 85vw;
+    align-items: center;
+    margin-right: 0;
+  }
+  
+  .content-component > h1 {
+    margin: 0;
+    font-size: 4rem;
+    text-align: center;
+  }
+  
+  .content-component > p {
+    font-size: 1rem;
+    margin: 0;
+    padding: 1.5rem 0.5rem;
+    text-align: center;
+  }
+
+  /**/
+  .calculator-component {
+    width: 80vw;
+    margin-top: 1.5rem;
+  }
+  
+  .input-radio {
+    margin: 2.5rem 0 2.5rem 0;
+    column-gap: 15.5rem;
+  }
+  
+  .input-text {
+    column-gap: 3.5rem;
+  }
+  
+  .input-group {
+    width: 300px;
+  }
+}
+
+/* Media Query for Mobile Devices */ 
+@media (max-width: 480px) {
+  .body-component {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .content-component {
+    min-width: 90vw;
+    align-items: center;
+    margin-right: 0;
+  }
+  
+  .content-component > h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+  }
+  
+  .content-component > p {
+    font-size: 1rem;
+    margin: 0;
+    padding: 1.5rem 0.25rem;
+    text-align: center;
+  }
+
+  /**/
+  .calculator-component {
+    width: 75vw;
+    margin-top: 1.5rem;
+  }
+  
+  .calculator-component > h3 {
+    margin: 0 0 1rem -1rem;
+    font-size: 1.35rem;
+  }
+
+  .input-radio {
+    margin: 2.5rem 0 2.5rem 0;
+    column-gap: 2.5rem;
+  }
+
+  .input-text {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  
+  .input-group {
+    width: 270px;
+  }
+
+  .result {
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .welcome-div{
+    margin-top: 2.5rem;
+  }
+  
+  .bmi {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  
+  .bmi-info,
+  .bmi-suggestion {
+    max-width: 100%;
+  }
+
+  .bmi-info h1{
+    margin: 0;
+  }
 }
