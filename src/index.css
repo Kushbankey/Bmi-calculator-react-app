@@ -13,7 +13,7 @@ body {
 .body-component {
   display: flex;
   flex-direction: row;
-  padding: 10rem;
+  padding: 7rem 0 0 7rem;
 }
 
 .content-component {
@@ -42,7 +42,6 @@ body {
 
 .calculator-component {
   background-color: #fff;
-  width: 36vw;
   padding: 2rem 1.75rem;
   border-radius: 10px;
   overflow: hidden;
@@ -193,11 +192,11 @@ body {
 } 
 
 /* Media Query for Tablets Ipads portrait mode */ 
-@media (min-width: 481px) and (max-width: 1024px){
+@media (min-width: 751px) and (max-width: 1024px){
   .body-component {
     flex-direction: column;
     align-items: center;
-    padding: 6rem;
+    padding: 5rem;
   }
 
   .content-component {
@@ -240,7 +239,7 @@ body {
 }
 
 /* Media Query for Mobile Devices */ 
-@media (max-width: 480px) {
+@media (max-width: 750px) {
   .body-component {
     flex-direction: column;
     align-items: center;
