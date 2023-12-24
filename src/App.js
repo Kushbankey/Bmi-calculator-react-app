@@ -106,7 +106,9 @@ function Calculator() {
               type="text"
               placeholder="0"
               value={weight}
-              onChange={(e) => setWeight(Number(e.target.value))}
+              onChange={(e) =>
+                setWeight(isNaN(e.target.value) ? 0 : Number(e.target.value))
+              }
             />
             <span className="unit">
               {unitSystem === "metric" ? "kg" : "lb"}
@@ -120,7 +122,9 @@ function Calculator() {
               type="text"
               placeholder="0"
               value={height}
-              onChange={(e) => setHeight(Number(e.target.value))}
+              onChange={(e) =>
+                setHeight(isNaN(e.target.value) ? 0 : Number(e.target.value))
+              }
             />
             <span className="unit">
               {unitSystem === "metric" ? "cm" : "in"}
